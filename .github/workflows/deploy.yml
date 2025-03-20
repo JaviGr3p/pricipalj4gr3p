@@ -3,14 +3,21 @@ name: Deploy Astro site to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Cambia si tu rama principal se llama diferente
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -27,11 +34,11 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: dist
+          path: dist  # Asegúrate de que "dist" es la carpeta de salida de Astro
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
