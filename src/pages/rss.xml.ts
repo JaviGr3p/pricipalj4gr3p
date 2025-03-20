@@ -8,7 +8,7 @@ export async function GET(context: APIContext) {
         (a, b) => Number(new Date(b.data.date)) - Number(new Date(a.data.date))
     );
     return rss({
-        title: '0xDedinfosec Blogs',
+        title: 'J4Gr3p Blogs',
         description:
             'I post My Hackthebox writeups and other InfoSec findings here.',
         site: context.site || 'https://0xdedinfosec.vercel.app',

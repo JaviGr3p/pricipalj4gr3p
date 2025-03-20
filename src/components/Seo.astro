@@ -8,18 +8,18 @@ interface Props {
 }
 const {
     title,
-    description = 'I post My Hackthebox writeups and other InfoSec findings here.',
+    description = 'I post My HTB Writeups and other InfoSec.',
     ogImage = 'https://0xdedinfosec.vercel.app/og.png',
 } = Astro.props as Props;
-const twitterHandle = '@0xdedinfosec';
+const twitterHandle = '@j4gr3p';
 ---
 
 <SEO
-    title={title ? `${title} | 0xDedinfosec` : '0xDedinfosec Blogs'}
+    title={title ? `${title} | j4gr3p` : 'j4gr3p Blogs'}
     description={description}
     openGraph={{
         basic: {
-            title: '0xDedinfosec',
+            title: 'j4gr3p',
             type: 'website',
             image: ogImage,
         },
@@ -28,10 +28,10 @@ const twitterHandle = '@0xdedinfosec';
         creator: twitterHandle,
         card: 'summary_large_image',
         site: twitterHandle,
-        title: '0xDedinfosec',
+        title: 'j4gr3pc',
         description,
         image: ogImage,
-        imageAlt: '0xDedinfosec',
+        imageAlt: 'j4gr3p',
     }}
     extend={{
         link: [

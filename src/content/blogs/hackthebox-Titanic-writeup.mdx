@@ -1,0 +1,18 @@
+---
+title: Hackthebox Titanic Writeup
+slug: hackthebox-titanic-writeup
+description: This walk through details the process of exploiting the Titanic machine on HackTheBox. By enumerating services on Port 80 and Port 22, we discover a Gitea instance on a subdomain. An LFI (Local File Inclusion) vulnerability exposes Gitea’s database, enabling us to retrieve credentials for a user named “developer.” After logging in via SSH, we uncover a script that uses a vulnerable version of ImageMagick, which can be exploited to gain root access.
+date: 2021-11-26
+image: hackthebox-titanic-writeup.webp
+---
+
+import FixTheImageURL from '../../components/mdxComponents/FixTheImageURL.astro';
+import { components as MDXComponents } from '../../components/mdxComponents';
+export const components = MDXComponents;
+
+**Titanic**
+
+Validación de conexión
+
+Escaneo de puertos y servicios:
+

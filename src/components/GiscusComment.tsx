@@ -24,7 +24,7 @@ export default function GiscusComment() {
                 category='General'
                 categoryId='DIC_kwDOGZa4PM4CSgid'
                 mapping='url'
-                term='Welcome to 0xDedinfosec comment!'
+                term='Welcome to my page personal, comment!'
                 reactionsEnabled='1'
                 emitMetadata='0'
                 inputPosition='top'
