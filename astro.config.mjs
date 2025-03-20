@@ -25,6 +25,7 @@ export default defineConfig({
     site: 'https://JaviGr3p.github.io/pricipalj4gr3p/',
     base: '/pricipalj4gr3p/',  
     output: 'static',
+    adapter: github(),
     integrations: [tailwind(), react(), mdx(), sitemap()],
     markdown: {
         syntaxHighlight: false,
