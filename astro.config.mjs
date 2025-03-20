@@ -23,6 +23,8 @@ const prettyCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
     site: 'https://JaviGr3p.github.io/pricipalj4gr3p/',
+    base: '/pricipalj4gr3p/',  
+    output: 'static',
     integrations: [tailwind(), react(), mdx(), sitemap()],
     markdown: {
         syntaxHighlight: false,
