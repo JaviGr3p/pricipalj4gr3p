@@ -3,7 +3,7 @@ name: Deploy Astro site to GitHub Pages
 on:
   push:
     branches:
-      - main  # Cambia si tu rama principal se llama diferente
+      - main  # Asegúrate de que esta es tu rama principal
 
 permissions:
   contents: read
