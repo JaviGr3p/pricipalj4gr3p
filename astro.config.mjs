@@ -22,7 +22,7 @@ const prettyCodeOptions = {
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://0xdedinfosec.vercel.app/',
+    site: 'https://JaviGr3p.github.io/pricipalj4gr3p/',
     integrations: [tailwind(), react(), mdx(), sitemap()],
     markdown: {
         syntaxHighlight: false,
