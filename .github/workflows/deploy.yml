@@ -37,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: dist  # Asegúrate de que "dist" es la carpeta de salida de Astro
+          path: dist  # "dist" debe ser la carpeta de salida de Astro
 
       - name: Deploy to GitHub Pages
         id: deployment

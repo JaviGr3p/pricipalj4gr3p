@@ -2,11 +2,16 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
+import github from '@astrojs/github'; 
+import sitemap from '@astrojs/sitemap';
 import theme from './dark-theme.json';
 import rehypeSlug from 'rehype-slug';
+import staticSite from '@astrojs/static-site';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';
-import sitemap from '@astrojs/sitemap';
+
+adapter: staticSite(),
+
 const prettyCodeOptions = {
     theme,
     onVisitHighlightedLine(node) {
@@ -20,12 +25,11 @@ const prettyCodeOptions = {
     tokensMap: {},
 };
 
-// https://astro.build/config
 export default defineConfig({
-    site: 'https://JaviGr3p.github.io/pricipalj4gr3p/',
-    base: '/pricipalj4gr3p/',  
+    site: 'https://JaviGr3p.github.io/pricipalj4gr3p/', // 🔹 URL correcta
+    base: '/pricipalj4gr3p/',  // 🔹 Asegúrate de que coincide con el nombre del repositorio
     output: 'static',
-    adapter: github(),
+    adapter: github(), // 🔹 Usa el adaptador correctamente
     integrations: [tailwind(), react(), mdx(), sitemap()],
     markdown: {
         syntaxHighlight: false,
